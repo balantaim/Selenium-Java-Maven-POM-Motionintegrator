@@ -11,8 +11,6 @@ import com.motionintegrator.pages.HomePage;
 
 public class HomeTest extends BaseTest {
 	
-	HomePage homePage = new HomePage();
-	
 	By myHover = By.xpath("/html/body/div[1]/div/div/main/section[2]/div/div/div/article[1]/a");
 	By tires = By.xpath("/html/body/div[1]/div/div/main/section[2]/div/div/div/article[1]/a/div");
 	By city = By.xpath("/html/body/div/div/main/div/div[4]/div/a[9]");

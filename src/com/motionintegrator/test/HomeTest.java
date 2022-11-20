@@ -21,7 +21,7 @@ public class HomeTest extends BaseTest {
 	By myStarts = By.className("ReviewSummarystyled__Score-sc-1scryp4-2");
 	
 	@Test(description = "Visit the webpage, navigate to workshop and check the info")
-	public void findTiresBtn() throws InterruptedException {
+	public void myWorkshopTest() throws InterruptedException {
 		//Step 1: Scroll to the Button "Tires change", then mouse hover it and click 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,1000)");

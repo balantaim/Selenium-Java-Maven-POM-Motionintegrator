@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SmokeTestSuite" verbose="1">
+
+    <!-- Test listener replace logger -->
+    <listeners>
+        <listener class-name="com.motionintegrator.base.TestListener"/>
+    </listeners>
+
+    <test name="PositiveLogInTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.motionintegrator.tests.HomeTests" />
+        </classes>
+    </test>
+
+
+
+</suite>

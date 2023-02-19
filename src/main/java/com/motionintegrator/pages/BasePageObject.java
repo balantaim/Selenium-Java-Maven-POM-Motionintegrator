@@ -95,12 +95,15 @@ public class BasePageObject {
             attempts++;
         }
     }
+
+    /** Wait until element is presented */
     protected WebElement waitUntilPresenceOfElement(By locator, Integer... timeOutInSeconds) {
         WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds.length > 0 ? timeOutInSeconds[0] : null);
         WebElement webElement = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
         return webElement;
     }
 
+    /** Wait until element is able to be clickable */
     protected WebElement waitUntilItemToBeClickable(By locator, Integer... timeOutInSeconds) {
         WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds.length > 0 ? timeOutInSeconds[0] : null);
         WebElement webElement = wait.until(ExpectedConditions.elementToBeClickable(locator));

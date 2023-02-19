@@ -1,0 +1,40 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SmokeTestSuite" verbose="1">
+
+    <!-- Test listener replace logger -->
+    <listeners>
+        <listener class-name="com.motionintegrator.base.TestListener"/>
+    </listeners>
+
+    <test name="PositiveLogInTest-headless-phantomjs">
+        <parameter name="browser" value="phantomjs"/>
+        <classes>
+            <class name="com.motionintegrator.tests.HomeTests" />
+        </classes>
+    </test>
+
+    <test name="PositiveLogInTest-headless-firefox">
+        <parameter name="browser" value="firefoxheadless"/>
+        <classes>
+            <class name="com.motionintegrator.tests.HomeTests" />
+        </classes>
+    </test>
+
+    <test name="PositiveLogInTest-headless-chrome">
+        <parameter name="browser" value="chromeheadless"/>
+        <classes>
+            <class name="com.motionintegrator.tests.HomeTests" />
+        </classes>
+    </test>
+
+    <test name="PositiveLogInTest-headless-htmlunit">
+        <parameter name="browser" value="htmlunit"/>
+        <classes>
+            <class name="com.motionintegrator.tests.HomeTests" />
+        </classes>
+    </test>
+
+
+
+</suite>
